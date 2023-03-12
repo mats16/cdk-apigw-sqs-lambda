@@ -1,6 +1,6 @@
 {
-  "name": "cdk-apigw-sqs-timestream",
-  "description": "Example CDK app for API Gateway with SQS and Timestream",
+  "name": "cdk-apigw-sqs-lambda",
+  "description": "Example CDK app for API Gateway with SQS and Lambda",
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
@@ -41,9 +41,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "1.6.0",
-    "@aws-lambda-powertools/metrics": "1.6.0",
-    "@aws-lambda-powertools/tracer": "1.6.0",
     "@types/aws-lambda": "^8.10.111",
     "aws-cdk-lib": "^2.67.0",
     "constructs": "^10.0.5"

@@ -9,7 +9,6 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'cdk-apigw-sqs-timestream-dev', { env: devEnv });
-// new MyStack(app, 'cdk-apigw-sqs-timestream-prod', { env: prodEnv });
+new MyStack(app, 'cdk-apigw-sqs-lambda-example', { env: devEnv });
 
 app.synth();

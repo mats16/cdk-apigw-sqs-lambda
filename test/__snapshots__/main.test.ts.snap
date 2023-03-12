@@ -266,9 +266,6 @@ exports[`Snapshot 1`] = `
     },
     "Queue4A7E3555": {
       "DeletionPolicy": "Delete",
-      "Properties": {
-        "KmsMasterKeyId": "alias/aws/sqs",
-      },
       "Type": "AWS::SQS::Queue",
       "UpdateReplacePolicy": "Delete",
     },
@@ -285,9 +282,9 @@ exports[`Snapshot 1`] = `
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "e5cd280ca23f3dde6223b996fbe817ef5a57b9644818f96592ef811d8b902394.zip",
+          "S3Key": "c1dd8487ed68f67dc8e38dbcc77c1a5338eb7cf2677c5bf61d41cea0cc3c6d90.zip",
         },
-        "Description": "Message processor for Slack App",
+        "Description": "Queue processor function",
         "Environment": {
           "Variables": {
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",

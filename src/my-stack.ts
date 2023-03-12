@@ -12,9 +12,7 @@ export class MyStack extends cdk.Stack {
     super(scope, id, props);
 
     /** API Gateway からメッセージを受け取るキュー */
-    const queue = new sqs.Queue(this, 'Queue', {
-      encryption: sqs.QueueEncryption.KMS_MANAGED,
-    });
+    const queue = new sqs.Queue(this, 'Queue');
 
     /** API Gateway が SQS にアクセスする際に利用する IAM Role */
     const integrationRole = new iam.Role(this, 'IntegrationRole', {
@@ -78,15 +76,11 @@ export class MyStack extends cdk.Stack {
 
     /** 非同期で SQS Message を処理する Lambda Function */
     const queueProcessor = new NodejsFunction(this, 'QueueProcessor', {
-      description: 'Message processor for Slack App',
+      description: 'Queue processor function',
       entry: './src/functions/queue-processor.ts',
       runtime: lambda.Runtime.NODEJS_18_X,
       architecture: lambda.Architecture.ARM_64,
       timeout: cdk.Duration.seconds(30), // Queue visibility timeout
-      environment: {
-      },
-      initialPolicy: [
-      ],
       events: [
         new SqsEventSource(queue, {
           maxConcurrency: 10,

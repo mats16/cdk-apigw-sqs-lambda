@@ -71,21 +71,6 @@
       "type": "build"
     },
     {
-      "name": "@aws-lambda-powertools/logger",
-      "version": "1.6.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-lambda-powertools/metrics",
-      "version": "1.6.0",
-      "type": "runtime"
-    },
-    {
-      "name": "@aws-lambda-powertools/tracer",
-      "version": "1.6.0",
-      "type": "runtime"
-    },
-    {
       "name": "@types/aws-lambda",
       "type": "runtime"
     },
